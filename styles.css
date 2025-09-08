@@ -8,25 +8,29 @@ body {
 
 /* Navigation bar */
 nav {
-  display: flex;
-  align-items: center;
+  text-align: center; /* center content horizontally */
   margin-bottom: 20px;
 }
 
-nav img {
-  vertical-align: middle;
-  margin-right: 15px;
-}
-
-nav a {
-  margin-right: 15px;
+/* Links */
+nav .nav-links a {
+  margin: 0 10px;
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
+  font-size: 0.9em;  /* smaller font size */
 }
 
-nav a:hover {
+nav .nav-links a:hover {
   text-decoration: underline;
+}
+
+/* Logo below links */
+nav img#logo {
+  display: block;       /* moves logo to a new line */
+  margin: 10px auto 0;  /* center horizontally */
+  width: 100px;         /* adjust size if needed */
+  height: auto;
 }
 
 /* Header */
@@ -75,4 +79,5 @@ footer {
   border-top: 1px solid #ccc;
   color: #777;
   font-size: 0.9em;
+  text-align: center;
 }
