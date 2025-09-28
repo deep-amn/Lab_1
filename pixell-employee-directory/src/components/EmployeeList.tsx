@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type { Employee } from '../../src/types';
-import employeesData from '../employees.json';
+import employeesData from '../data/employees.json';
 
 const EmployeeList: React.FC = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
