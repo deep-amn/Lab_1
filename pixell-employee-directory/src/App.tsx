@@ -1,17 +1,20 @@
-import React from 'react';
-import NavBar from './components/NavBar';
-import Header from './components/Header';
-import EmployeeList from './components/EmployeeList';
-import Footer from './components/Footer';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import EmployeeList from "./components/EmployeeList";
+import Organization from "./components/organization/organization";
 
 const App: React.FC = () => {
   return (
     <div>
       <NavBar />
-      <Header />
       <main>
-        <EmployeeList />
+        <Routes>
+          <Route path="/employees" element={<EmployeeList />} />
+          <Route path="/organization" element={<Organization />} />
+          <Route path="*" element={<EmployeeList />} /> 
+        </Routes>
       </main>
       <Footer />
     </div>

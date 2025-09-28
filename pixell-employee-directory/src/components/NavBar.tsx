@@ -1,13 +1,14 @@
 import React from "react";
-import "./NavBar.css"; // optional: your CSS for the nav
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="nav-links">
-        <a href="#">Employees</a>
-        <a href="#">Organization</a>
-    </div>
+        <Link to="/employees">Employees</Link>
+        <Link to="/organization">Organization</Link>
+      </div>
       <div className="nav-logo">
         <img src="/logo.png" alt="Pixell River Financial Logo" />
       </div>
