@@ -1,26 +1,20 @@
-import React from 'react';
-import NavBar from './components/NavBar';
-import Header from './components/Header';
-import EmployeeList from './components/EmployeeList';
-import Organization from './components/organization/organization.tsx';
-import Footer from './components/Footer';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import EmployeeList from "./components/EmployeeList";
+import Organization from "./components/organization/organization";
 
 const App: React.FC = () => {
   return (
     <div>
       <NavBar />
-      <Header />
       <main>
-        <section id="employees">
-          <h2>Employees</h2>
-          <EmployeeList />
-        </section>
-
-        <section id="organization">
-          <h2>Organization</h2>
-          <Organization />
-        </section>
+        <Routes>
+          <Route path="/employees" element={<EmployeeList />} />
+          <Route path="/organization" element={<Organization />} />
+          <Route path="*" element={<EmployeeList />} /> 
+        </Routes>
       </main>
       <Footer />
     </div>
