@@ -11,6 +11,7 @@
     "start:backend": "npm run dev --workspace=backend"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "concurrently": "^8.2.2"
   }
 }
